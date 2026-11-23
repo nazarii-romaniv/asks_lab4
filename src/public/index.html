@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Second Brain</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="#/" id="home">Second Brain</a></h1>
+    <input id="q" type="search" placeholder="Пошук за словом…" aria-label="Пошук">
+    <button id="new-btn" type="button">+ Нова нотатка</button>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <h2>Категорії</h2>
+      <ul id="categories"></ul>
+      <h2>Теги</h2>
+      <div id="tags"></div>
+    </aside>
+    <main>
+      <section id="list-view">
+        <p id="count" aria-live="polite"></p>
+        <ul id="results"></ul>
+      </section>
+      <article id="note-view" hidden></article>
+    </main>
+  </div>
+
+  <dialog id="new-dialog">
+    <form id="new-form">
+      <h2>Нова нотатка</h2>
+      <label>Назва <input name="title" required maxlength="120"></label>
+      <label>Категорія
+        <select name="category">
+          <option>Inbox</option><option>Projects</option><option>Areas</option>
+          <option>Resources</option><option>Archives</option>
+        </select>
+      </label>
+      <label>Теги (через кому) <input name="tags" placeholder="architecture, cloud"></label>
+      <label>Текст (Markdown) <textarea name="body" rows="8"></textarea></label>
+      <p id="form-error" class="error" role="alert"></p>
+      <div class="actions">
+        <button type="submit">Зберегти</button>
+        <button type="button" id="cancel-new">Скасувати</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
