@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+*.key
+*.pem
+*.tmp
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+backups/
